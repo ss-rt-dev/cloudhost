@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cleso Host – Kostenloses Bot Hosting für Discord</title>
+  <meta name="description" content="Cleso Host hostet deinen Discord Bot kostenlos – mit eigenem Panel, Live-Konsole und Support per Ticket direkt auf Discord.">
+  <meta name="theme-color" content="#08080b">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-30 -30 380 380'%3E%3Cpath d='M255.1 74.3A128 128 0 1 0 255.1 245.7' fill='none' stroke='%23f0238f' stroke-width='64' stroke-linecap='round'/%3E%3Cpolygon points='190,70 110,168 152,168 128,250 212,146 168,146' fill='%23f0238f' transform='translate(160 160) scale(.78) translate(-160 -160)'/%3E%3C/svg%3E">
+  <!-- Verhindert kurzes Aufblitzen des falschen Modus -->
+  <script>(function(){try{var t=localStorage.getItem('cleso-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}})();</script>
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}.hero h1 .word{opacity:1!important;transform:none!important}.theme-toggle{display:none}</style></noscript>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="bg-blobs" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+  <header class="nav" id="top">
+    <a class="brand" href="#top" aria-label="Cleso Host – Startseite">
+      <svg viewBox="-30 -30 380 380" aria-hidden="true"><path d="M255.1 74.3A128 128 0 1 0 255.1 245.7" fill="none" stroke="#f0238f" stroke-width="64" stroke-linecap="round"/><polygon points="190,70 110,168 152,168 128,250 212,146 168,146" fill="currentColor" transform="translate(160 160) scale(.78) translate(-160 -160)"/></svg>
+      <span>Cleso <b>Host</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Hauptnavigation">
+      <a href="#features">Features</a>
+      <a href="#so-gehts">So geht's</a>
+      <a href="#panel">Panel</a>
+      <a href="#game-server">Game Server</a>
+      <a href="#community">Community</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary btn-sm" href="https://discord.gg/pQcPuvV7RV" target="_blank" rel="noopener">Discord beitreten</a>
+      <button class="menu-btn" type="button" aria-label="Menü öffnen" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+      <!-- Ganz oben rechts: im hellen Modus ein Mond (→ dunkel), im dunklen Modus eine Sonne (→ hell) -->
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Zum dunklen Modus wechseln" title="Zum dunklen Modus wechseln">
+        <svg class="moon" viewBox="0 0 24 24" fill="currentColor" fill-opacity=".18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor" fill-opacity=".2"/><g class="rays"><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="4.2" y1="4.2" x2="6" y2="6"/><line x1="18" y1="18" x2="19.8" y2="19.8"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.2" y1="19.8" x2="6" y2="18"/><line x1="18" y1="6" x2="19.8" y2="4.2"/></g></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow reveal"><i></i> Gratis Bot Hosting für Discord</span>
+          <h1 data-words>Dein Bot verdient ein <span class="grad">Zuhause.</span></h1>
+          <p class="lead reveal" style="--d:3">Cleso Host hostet deinen Discord Bot kostenlos – mit eigenem Panel, Live-Konsole und Support direkt auf Discord.</p>
+          <div class="cta-row reveal" style="--d:4">
+            <a class="btn btn-primary" href="https://discord.gg/pQcPuvV7RV" target="_blank" rel="noopener">Jetzt Discord beitreten
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#so-gehts">So funktioniert's</a>
+          </div>
+          <div class="trust reveal" style="--d:5">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>100 % gratis</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Eigenes Panel</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Support per Ticket</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal right" style="--d:2">
+          <div class="floaty">
+            <div class="terminal" id="terminal" aria-label="Beispiel: Bot startet im Panel">
+              <div class="term-bar"><i></i><i></i><i></i><span>MeinBot – Konsole</span><b class="status">Startet …</b></div>
+              <div class="term-body" aria-live="off"></div>
+            </div>
+          </div>
+          <div class="chip-float c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Läuft rund um die Uhr</div>
+          <div class="chip-float c2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg>Gratis</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Gratis Hosting</span><span>Eigenes Panel</span><span>Live-Konsole</span><span>Ticket-Support</span><span>Giveaways</span><span>Discord Bots</span><span>Community</span>
+        <span>Gratis Hosting</span><span>Eigenes Panel</span><span>Live-Konsole</span><span>Ticket-Support</span><span>Giveaways</span><span>Discord Bots</span><span>Community</span>
+      </div>
+    </div>
+
+    <!-- ===================== FEATURES ===================== -->
+    <section id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Was ist Cleso Host?</span>
+          <h2>Hosting, das einfach <span class="grad">läuft.</span></h2>
+          <p class="lead">Cleso Host ist ein Hosting-Projekt für Discord Bots. Du lädst deinen Bot hoch, startest ihn im Panel, und wir kümmern uns um den Rest – kostenlos.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card reveal" style="--d:0"><div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg></div><h3>Komplett gratis</h3><p>Dein Bot läuft bei uns ohne Kosten. Keine versteckten Gebühren, kein Kleingedrucktes.</p></article>
+          <article class="card reveal" style="--d:1"><div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg></div><h3>Eigenes Panel</h3><p>Dateien hochladen, starten, stoppen und neu starten – alles an einem Ort, bequem im Browser.</p></article>
+          <article class="card reveal" style="--d:2"><div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div><h3>Live-Konsole</h3><p>Sieh in Echtzeit, was dein Bot macht, und finde Fehler schneller.</p></article>
+          <article class="card reveal" style="--d:0"><div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></div><h3>Account per Discord</h3><p>Dein Panel-Account wird über unseren Discord-Bot erstellt. Die Zugangsdaten bekommst du per Direktnachricht.</p></article>
+          <article class="card reveal" style="--d:1"><div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m4.93 19.07 4.24-4.24"/></svg></div><h3>Support per Ticket</h3><p>Probleme oder Fragen? Öffne ein Ticket auf unserem Discord. Unser Team hilft dir weiter.</p></article>
+          <article class="card reveal" style="--d:2"><div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Aktive Community</h3><p>Giveaways, VIP- und Premium-Rollen und Leute, die sich gegenseitig helfen.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SO GEHT'S ===================== -->
+    <section id="so-gehts">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">In 3 Schritten</span>
+          <h2>Vom Bot zum <span class="grad">Server.</span></h2>
+          <p class="lead">Ohne Technik-Kauderwelsch: So kommst du an deinen Gratis Server.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal" style="--d:0"><div class="num">1</div><h3>Discord beitreten</h3><p>Komm auf unseren Discord-Server – dort läuft alles: Ticket-Panel, Support und Community.</p></div>
+          <div class="step reveal" style="--d:2"><div class="num">2</div><h3>Ticket öffnen</h3><p>Wähle im Ticket-Panel „Server bekommen“ und beantworte kurz die Fragen im Formular.</p></div>
+          <div class="step reveal" style="--d:4"><div class="num">3</div><h3>Bot starten</h3><p>Lade deine Dateien im Panel hoch, drück auf Start – und dein Bot läuft.</p></div>
+        </div>
+        <div class="center reveal"><a class="btn btn-primary" href="https://discord.gg/pQcPuvV7RV" target="_blank" rel="noopener">Los geht's auf Discord</a></div>
+      </div>
+    </section>
+
+    <!-- ===================== ZAHLEN ===================== -->
+    <section style="padding:30px 0">
+      <div class="container numbers">
+        <div class="card number reveal" data-tilt="off"><b data-count="100" data-suffix=" %">0 %</b><span>gratis</span></div>
+        <div class="card number reveal" data-tilt="off" style="--d:1"><b data-count="3">0</b><span>Schritte bis zum Server</span></div>
+        <div class="card number reveal" data-tilt="off" style="--d:2"><b>24/7</b><span>Hosting für deinen Bot</span></div>
+      </div>
+    </section>
+
+    <!-- ===================== PANEL ===================== -->
+    <section id="panel">
+      <div class="container split">
+        <div class="reveal left">
+          <span class="eyebrow">Das Panel</span>
+          <h2 style="margin:18px 0 16px">Alles im <span class="grad">Blick.</span></h2>
+          <p class="lead">Im Panel verwaltest du deinen Bot ohne Kommandozeile und ohne Vorkenntnisse.</p>
+          <ul class="checklist">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div>Dateien hochladen und verwalten<span>Per Upload im Browser – schnell und einfach.</span></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div>Starten, stoppen, neu starten<span>Mit einem Klick, jederzeit.</span></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div>Konsole, CPU und Arbeitsspeicher live<span>Du siehst, was dein Bot gerade macht.</span></div></li>
+          </ul>
+        </div>
+        <div class="reveal right" style="--d:2">
+          <div class="terminal">
+            <div class="term-bar"><i></i><i></i><i></i><span>MeinBot – Statistiken</span><b class="status on">Läuft</b></div>
+            <div class="term-body" style="min-height:0">
+              <div class="ln mut">Uptime</div><div class="ln" style="font-size:1.6rem;font-weight:800;font-family:var(--font)">00:12:48</div>
+              <div class="stats">
+                <div class="stat"><small>CPU</small><strong>0.4 %</strong></div>
+                <div class="stat"><small>RAM</small><strong>118 MiB</strong></div>
+                <div class="stat"><small>Netzwerk</small><strong>55 KiB</strong></div>
+              </div>
+              <div class="ln mut" style="margin-top:14px;font-size:.78rem">Beispielwerte zur Darstellung.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GAME SERVER ===================== -->
+    <section id="game-server">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Game Server</span>
+          <h2>Welche Spiele sollen <span class="grad">als Nächstes?</span></h2>
+          <p class="lead">Wir wollen unser Angebot erweitern und fragen dich: Welche Game Server brauchst du? Sag es uns auf Discord oder in den Kommentaren.</p>
+        </div>
+        <div class="grid-4">
+          <article class="card game reveal" style="--d:0"><span class="tag">Umfrage</span><div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h3>Minecraft</h3><p>Survival, Modpacks und Minigames mit deinen Freunden.</p></article>
+          <article class="card game reveal" style="--d:1"><span class="tag">Umfrage</span><div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="9" r="2"/><circle cx="12" cy="6" r="2"/><circle cx="17" cy="9" r="2"/><path d="M12 12c-3 0-5 2.5-5 5 0 2 2 3 5 3s5-1 5-3c0-2.5-2-5-5-5z"/></svg></div><h3>Palworld</h3><p>Kreaturen sammeln und gemeinsam überleben.</p></article>
+          <article class="card game reveal" style="--d:2"><span class="tag">Umfrage</span><div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14"/><path d="M3 13l2-6h14l2 6v4H3z"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg></div><h3>FiveM</h3><p>Roleplay-Server für die GTA-Community.</p></article>
+          <article class="card game reveal" style="--d:3"><span class="tag">Umfrage</span><div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><h3>Rust</h3><p>Hardcore-Survival im Multiplayer.</p></article>
+        </div>
+        <div class="center reveal"><a class="btn btn-ghost" href="https://discord.gg/pQcPuvV7RV" target="_blank" rel="noopener">Auf Discord mitentscheiden</a></div>
+      </div>
+    </section>
+
+    <!-- ===================== COMMUNITY ===================== -->
+    <section id="community">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Community</span>
+          <h2>Mehr als nur <span class="grad">Hosting.</span></h2>
+          <p class="lead">Auf unserem Discord gibt es Giveaways und besondere Rollen für alle, die mehr aus der Community herausholen wollen.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card reveal" style="--d:0"><div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg></div><h3>Giveaways</h3><p>Regelmäßige Verlosungen auf unserem Discord. Ein Klick auf „Teilnehmen“ – und mit etwas Glück gewinnst du.</p></article>
+          <article class="card reveal" style="--d:1"><div class="icon-tile"><svg viewBox="0 0 24 24" fill="currentColor" fill-opacity=".2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><h3>VIP-Rolle</h3><p>Eine besondere Rolle für alle, die mehr aus der Community herausholen wollen. Der Einstieg.</p></article>
+          <article class="card reveal" style="--d:2"><div class="icon-tile" style="color:#f5b82e"><svg viewBox="0 0 24 24" fill="currentColor" fill-opacity=".2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M5 20h14"/></svg></div><h3>Premium-Rolle</h3><p>Die nächste Stufe der Community-Rollen – das volle Paket.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Häufige <span class="grad">Fragen.</span></h2>
+        </div>
+        <div class="faq">
+          <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Ist Cleso Host wirklich gratis?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><p>Ja, das Bot Hosting bei Cleso Host ist kostenlos.</p></div></div>
+          <div class="faq-item reveal" style="--d:1"><button class="faq-q" type="button" aria-expanded="false">Wie bekomme ich meinen Server?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><p>Tritt unserem Discord bei, öffne im Ticket-Panel das Thema „Server bekommen“ und fülle das kurze Formular aus. Danach melden wir uns bei dir.</p></div></div>
+          <div class="faq-item reveal" style="--d:2"><button class="faq-q" type="button" aria-expanded="false">Wo bekomme ich meine Zugangsdaten?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><p>Dein Panel-Account wird über unseren Discord-Bot erstellt. Das Passwort schickt dir der Bot per Direktnachricht. Aktiviere dafür Direktnachrichten von Servermitgliedern und ändere das Passwort nach dem ersten Login.</p></div></div>
+          <div class="faq-item reveal" style="--d:3"><button class="faq-q" type="button" aria-expanded="false">Was passiert, wenn mein Bot ausfällt?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><p>Öffne ein Ticket auf unserem Discord. Unser Team schaut sich das an und hilft dir weiter.</p></div></div>
+          <div class="faq-item reveal" style="--d:4"><button class="faq-q" type="button" aria-expanded="false">Welche Daten speichert ihr?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><p>Nur das, was wir für Account, Tickets und Hosting brauchen. Alle Details stehen in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section style="padding-top:40px">
+      <div class="container">
+        <div class="cta-box reveal">
+          <h2>Bereit für deinen Gratis Server?</h2>
+          <p>Komm auf unseren Discord, öffne ein Ticket und starte deinen Bot noch heute.</p>
+          <a class="btn btn-white" href="https://discord.gg/pQcPuvV7RV" target="_blank" rel="noopener">Discord beitreten
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div>© <span data-year>2026</span> Cleso Host</div>
+      <nav aria-label="Footer">
+        <a href="#top">Nach oben</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="https://discord.gg/pQcPuvV7RV" target="_blank" rel="noopener">Discord</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
